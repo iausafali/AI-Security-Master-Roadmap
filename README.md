@@ -1,4 +1,4 @@
-# S++++++ Master Execution Roadmap
+# Master Execution Roadmap
 ## AI Systems Engineering × Offensive Security | 2026–2030
 
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org/std/the-standard)
@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Architecture](https://img.shields.io/badge/Arch-x86__64%2FCUDA-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-zone)
 [![Roadmap Status](https://img.shields.io/badge/Status-Phase%200%20IN_PROGRESS-FF6B35?logo=github&logoColor=white)](#-master-execution-table)
-[![S++++++ Protocol](https://img.shields.io/badge/Protocol-S%2B%2B%2B%2B%2B%2B-8B5CF6?logo=vercel&logoColor=white)](#-the-s-protocol-spec)
+[![Protocol](https://img.shields.io/badge/Protocol-S%2B%2B%2B%2B%2B%2B-8B5CF6?logo=vercel&logoColor=white)](#-the-s-protocol-spec)
 
 ---
 
