@@ -95,7 +95,7 @@ flowchart TB
 
 ---
 
-## 🛡 The S++++++ Protocol Spec
+## 🛡 The Protocol Spec
 
 The **S++++++ Standard** is a rigorous 6-stage engineering verification protocol. No phase or flagship milestone is marked complete based on passive consumption, tutorial completion, or surface-level wrappers. Every project must execute the following sequential exit pipeline:
 
