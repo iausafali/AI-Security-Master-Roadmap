@@ -45,18 +45,13 @@
   * Run benchmark suite against all 3 literature baselines across standardized datasets.
   * Measure throughput, latency distributions (p50, p95, p99), memory footprint, and detection metrics (Precision, Recall, F1, ROC-AUC).
 * **Week 6 (Ablation Matrix Execution):**
-  * Perform $\ge 5$ distinct ablation experiments isolating each subsystem's contribution:
-    1. Impact of feature representation depth.
-    2. Impact of loss function regularization.
-    3. Resilience under varied attack intensities.
-    4. Compute overhead scaling curves across core counts.
-    5. False positive rates under diverse benign background traffic.
+  * Perform $\ge 5$ distinct ablation experiments isolating each subsystem's contribution.
 
 ---
 
 ### 🏃 Sprint 4: Adversarial Red-Teaming & Stress Testing (Week 7: Jun 12 – Jun 18)
 * **Week 7 (Adversarial Stress Testing & Vulnerability Remediation):**
-  * Subject the system to active red-teaming: Generate adversarial evasion payloads, compute gradient-based perturbations, and attempt resource exhaustion attacks.
+  * Subject the system to active red-teaming inside an owned or explicitly authorized environment: generate adversarial evasion payloads, compute gradient-based perturbations, and attempt resource exhaustion attacks.
   * Patch all discovered failure modes and re-evaluate to verify hardened system performance.
 
 ---
@@ -70,7 +65,7 @@
 
 ---
 
-## 🔬 The S++++++ Audit Protocol
+## 🔬 Engineering Verification Protocol
 
 ### Stage 1: Derive — Mathematical Foundations
 - Document complete mathematical derivation of the core algorithm, statistical bounds, and complexity analysis in Chapter 3 of the thesis.
@@ -79,11 +74,11 @@
 - Full custom implementation with clean interfaces, automated test harnesses, and deterministic build scripts.
 
 ### Stage 3: Benchmark — Performance Targets
-- Outperform all 3 selected literature baselines with statistical significance ($p < 0.01$ via two-tailed t-test).
+- Compare against all 3 selected literature baselines with statistical significance ($p < 0.01$ via two-tailed t-test).
 - Computational overhead within acceptable real-world deployment bounds ($\le 5\%$ CPU, $\le 200$ MB RAM).
 
 ### Stage 4: Break & Patch
-- Document explicit failure modes discovered during adversarial testing and provide verified architectural mitigations.
+- Document explicit failure modes discovered during authorized adversarial testing and provide verified architectural mitigations.
 
 ---
 
