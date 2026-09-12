@@ -2,16 +2,19 @@
 
 # Phase 0: Recall Sprint — Secure Systems Utility Suite
 
-**Timeline:** September 12 – September 27, 2026 (16 Days)  
+**Timeline:** September 8 – September 25, 2026 (Canonical Phase Window)  
+**Execution Start:** September 12, 2026  
 **Compute Tier:** Local CPU / WSL2 — $0  
 **Project Directory:** `Project_Utility_Suite/`  
 **Core Objective:** Cold recall of systems programming, pointers, low-level memory layout, networking sockets, and data structures.
 
 ---
 
-## 📅 Granular Day-by-Day Execution Schedule (Sep 12 – Sep 27, 2026)
+## 📅 Granular Day-by-Day Execution Schedule (Execution Sequence)
 
-### 🕒 Days 1–2 (Sep 12–13) — C Memory & Pointer Bridge
+> The canonical phase window is **Sep 8–25, 2026**. This detailed sequence is a 16-day execution sequence designed to begin on Sep 12; compress or combine non-critical blocks as needed so the phase closes by Sep 25.
+
+### 🕒 Days 1–2 — C Memory & Pointer Bridge
 * **The 30/70 Fluff Filter:**
   * ❌ **SKIP:** CS50x Weeks 0 (Scratch), 1 (C Syntax/Loops), and 2 (Arrays/Compiling).
   * ❌ **SKIP:** SQLBolt basic `SELECT` intro.
@@ -31,23 +34,23 @@
 
 ---
 
-### 🕒 Days 3–6 (Sep 14–17) — Systems Utility Engine (Integrity & Log Analyzer)
+### 🕒 Days 3–6 — Systems Utility Engine (Integrity & Log Analyzer)
 * **The 30/70 Fluff Filter:**
   * ❌ **SKIP:** Standard textbook string manipulation libraries (`string.h` wrapper abstractions like `strtok` stateful quirks).
   * ▶️ **STUDY:** OpenSSL EVP API documentation (`man EVP_DigestInit_ex`) and POSIX directory traversal (`opendir`, `readdir`, `stat`).
 * **Sprint 1 (Days 3–4) — CLI File Integrity Checker (`integrity.c`):**
   * Implement SHA-256 file hashing via C file I/O chunking (64KB read buffers).
-  * Build an in-memory Merkle Tree: calculate hash of each file leaf $\to$ construct binary tree $\to$ compute single Root Manifest Fingerprint.
+  * Build an in-memory Merkle Tree: calculate hash of each file leaf → construct binary tree → compute single Root Manifest Fingerprint.
   * Store manifest as a memory-mapped binary file (`mmap`) for instant O(1) random-access verification against tampering.
 * **Sprint 2 (Days 5–6) — Pure C Log Analyzer (`log_analyzer.c`):**
   * Single-pass, streaming log parser in pure C without external heavy libraries.
   * Direct pointer-walking parser for `/var/log/syslog` and `/var/log/auth.log`.
-  * Sliding-window state tracker: detect $\ge 5$ failed SSH authentication attempts within a 300-second window.
+  * Sliding-window state tracker: detect ≥ 5 failed SSH authentication attempts within a 300-second window.
   * Stream formatted alerts directly into structured JSONL format to `stdout`.
 
 ---
 
-### 🕒 Days 7–12 (Sep 18–23) — Low-Level C Networking & Database Integration
+### 🕒 Days 7–12 — Low-Level C Networking & Database Integration
 * **The 30/70 Fluff Filter:**
   * ❌ **SKIP:** High-level web framework tutorials and socket wrappers (e.g., libcurl, libuv).
   * ▶️ **STUDY:** Beej's Guide to Network Programming (Chapters 3–7: Sockets, Structs, `bind`, `listen`, `accept`, `select`/`epoll`).
@@ -66,12 +69,12 @@
 
 ---
 
-### 🕒 Days 13–16 (Sep 24–27) — Audit, Debugging & GDB Patching
+### 🕒 Days 13–16 — Audit, Debugging & GDB Patching
 * **The 30/70 Fluff Filter:**
   * ❌ **SKIP:** IDE GUI debuggers — use raw GDB CLI and AddressSanitizer.
   * ▶️ **STUDY:** GDB advanced commands: layout asm, conditional breakpoints, memory watchpoints (`watch *ptr`), frame inspection (`bt full`).
-* **GDB Break-and-Patch Protocol (Day 13–14):**
-  1. **Introduce Bug 1 (Stack Buffer Overflow):** Introduce an unchecked `memcpy` in `http_server.c:parse_headers` when parsing custom headers $> 8192$ bytes.
+* **GDB Break-and-Patch Protocol (Days 13–14):**
+  1. **Introduce Bug 1 (Stack Buffer Overflow):** Introduce an unchecked `memcpy` in `http_server.c:parse_headers` when parsing custom headers > 8192 bytes.
   2. **Introduce Bug 2 (Heap Use-After-Free):** Force an early `free()` on the client connection struct in `tcp_server.c` before an asynchronous write completion callback.
   3. **Reproduce Crash in GDB:**
      ```bash
@@ -83,9 +86,9 @@
      (gdb) info registers
      ```
   4. **Patch & Verify:** Replace vulnerable buffers with bounded string operations, compile with `-fsanitize=address,undefined,leak -fstack-protector-strong`, and verify zero crashes.
-* **Final S++++++ Audit Sign-Off (Days 15–16):**
+* **Final Verification Sign-Off (Days 15–16):**
   * Execute 24-hour fuzz test using `afl-clang-fast`.
-  * Benchmark TCP throughput against `iperf3` baseline ($\ge 8$ Gbps loopback).
+  * Benchmark TCP throughput against `iperf3` baseline (≥ 8 Gbps loopback).
   * Compile `AUDIT_REPORT.md` and seal git tag `v0.6-audit-complete`.
 
 ---
@@ -124,7 +127,7 @@
 
 ---
 
-## 🔬 The S++++++ Audit Protocol
+## 🔬 Engineering Verification Protocol
 
 ### Stage 1: Derive — Mathematical Foundations
 - **TCP Congestion Control (Reno):**
@@ -139,9 +142,9 @@
 - Compile flags: `-std=c17 -Wall -Wextra -Wpedantic -Werror -O2 -g3`.
 
 ### Stage 3: Benchmark — Performance Targets
-- TCP Throughput: $\ge 8$ Gbps loopback.
-- Integrity Check: $\le 2.0$s per 10,000 files.
-- Memory Footprint: $\le 5$ MB RSS under 100 concurrent connections.
+- TCP Throughput: ≥ 8 Gbps loopback.
+- Integrity Check: ≤ 2.0s per 10,000 files.
+- Memory Footprint: ≤ 5 MB RSS under 100 concurrent connections.
 - Valgrind Leak Check: 0 bytes leaked.
 
 ### Stage 4: Break & Patch
