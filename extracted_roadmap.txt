@@ -1,0 +1,149 @@
+Executive Audit Summary
+Master Execution Table
+Phase-by-Phase Deep Dives
+Phase 0 - Recall Sprint (Sep 12-27, 2026)
+Objective: Not new learning - cold recall of calculus, linear algebra, DSA, and OOP forgotten over the summer.
+Balance: 100% foundational; no AI/security split yet.
+Courses: CS50x  |  MIT 6.006  |  SQLBolt
+Project: The Secure Systems Utility Suite doubles as recall vehicle and Phase 1 scaffolding.
+Compute: Local only, zero cost.
+Freeze window: None needed - pre-semester.
+Phase 1 - Semester 5 Fusion (Sep 28, 2026 - Jan 2027)
+Objective: Your transcript IS the union you're chasing this cycle - ML, AI, OS, InfoSec, SE all land in one semester.
+Balance: ~60% university-anchored depth / 40% fusion build - a fixed 70/30 split doesn't apply cleanly when five subjects converge.
+Courses: CS229  |  CS188  |  MIT 6.1810 (xv6)  |  PortSwigger  |  WSTG
+Project: ML/AI anomaly-detection model -> instrumented into a syscall-audit extension added to xv6 -> attacked/audited via WSTG -> shipped with tests/CI/docs.
+Compute: Local + free-tier Codespaces.
+Freeze window: Hard 14-day freeze before UCP midterms (~mid-Nov) and finals (~mid/late Jan).
+Phase 2 - Systems + Deep Learning (Feb-Apr 2027)
+Objective: Deep learning fundamentals paired with networking depth the semester didn't cover.
+Balance: 70% AI / 30% security.
+Courses: Deep Learning Spec.  |  fast.ai  |  CS144  |  Linux Journey  |  Windows Internals
+Project: Autodiff engine trains a real model without PyTorch; the TCP stack feeds a live intrusion detector.
+Compute: Local, light Colab burst.
+Freeze window: None (between semesters).
+Phase 3 - CV/NLP + Web Security Depth (May-Jul 2027)
+Objective: Applied perception/language models; security returns to full pentest methodology.
+Balance: 70% AI / 30% security.
+Courses: CS231n  |  CS224N  |  PortSwigger (advanced)  |  WSTG
+Project: Deploy the CV/NLP app, then run a full self-pentest against it.
+Compute: Colab/Codespaces GPU-lite.
+Freeze window: None (summer).
+Phase 4 - LLM + Binary Exploitation (Aug-Oct 2027)
+Objective: The first genuinely compute-heavy phase.
+Balance: 60% AI / 40% security - CS336 and pwn.college are each substantial alone.
+Courses: CS336  |  pwn.college
+Project: Train a real tokenizer/GPT model, then independently exploit a bug introduced into your own compiled inference server.
+Compute: Cloud GPU rental - the real RTX 4090/A100-tier phase.
+Freeze window: 14 days before semester 6 midterms if the academic calendar overlaps - verify before locking dates.
+Phase 5 - MLOps + Reverse Engineering (Nov 2027 - Jan 2028)
+Objective: Production ML discipline plus deep RE.
+Balance: 50% / 50%.
+Courses: CS229S  |  OST2  |  Ghidra
+Project: A monitored serving platform, plus a from-scratch Ghidra decompilation of one of your own binaries.
+Compute:  RAM TRAP  RAM-bound, not GPU-bound: 8GB will thrash under Ghidra+Docker+debugger concurrently - budget a cloud VM.
+Freeze window: Hard freeze before finals (~Jan).
+Phase 6 - Agents + Enterprise Security (Feb-Apr 2028)
+Objective: Autonomous agents meet enterprise identity/security.
+Balance: 50% / 50%.
+Courses: HF Agents Course  |  AD Fundamentals
+Project: An internal agent attacked across >=3 vectors inside your own AD lab.
+Compute:  RAM TRAP  Multi-VM cloud cluster required - a single 8GB machine cannot run DC + workstation + attacker box concurrently.
+Freeze window: Check semester 6/7 boundary for overlap.
+Phase 7 - FYP Integration (May-Jun 2028)
+Objective: Convert the degree requirement into a hybrid research artifact rather than a disconnected capstone.
+Balance: Determined by FYP scope.
+Project: Whatever FYP scope your supervisor approves, framed as threat-model -> baseline -> implementation -> evaluation.
+Compute: Local + FYP-scope dependent.
+Freeze window: Per university FYP calendar.
+Phase 8 - RL + Autonomous Security Agent (Jul-Dec 2028)
+Objective: Post-graduation; tracks converge toward research.
+Balance: AI-led, security-informed.
+Courses: CS224R
+Project: An RL agent that plans multi-step security tests without hardcoded rules.
+Compute: Cloud GPU.
+Freeze window: None (post-grad).
+Phase 9 - Formal Security + AI Red-Team (Jan-Jun 2029)
+Objective: Formal security foundations meet adversarial ML.
+Balance: 50% / 50%.
+Courses: MIT 6.1600  |  MITRE ATT&CK
+Project: Adversarial ML + secure RAG with measured defense improvements.
+Compute: Local + Cloud GPU burst.
+Freeze window: None (post-grad).
+Phase 10 - Research Reproductions (Jul-Dec 2029)
+Objective: Demonstrate research capability, not just claim it.
+Balance: Research-only.
+Project: 6 full paper reproductions, each with a documented divergence/failure analysis.
+Compute: Local + Cloud GPU as each paper demands.
+Freeze window: None (post-grad).
+Phase 11 - Original Invention (Jan-Sep 2030)
+Objective: The terminal proof the four years compounded into something, not just a transcript.
+Balance: Original research only.
+Project: One unified open-source system at the AI x security intersection, with real external adoption or citation.
+Compute: Cloud GPU, scaled to final scope.
+Freeze window: None (post-grad).
+The S++++++ Proof-of-Mastery Protocol
+A phase is never marked complete on lecture-completion or course-certificate grounds. The non-negotiable exit sequence applies to every flagship project in this report:
+Skipping any of the six stages means the phase is not S++++++ regardless of course-completion status.
+S++++++ MASTER REPORT & ROADMAP
+AI Systems Engineering  x  Offensive Security
+September 2026  -  September 2030    |    Generated 12 September 2026
+Five fixes are enforced in this version, four requested plus one structural correction the requested four didn't cover:
+1. 100% hyperlink coverage - every resource below is a live clickable link.
+2. Hardware/compute tier per phase - specified per row, including RAM-bound phases GPU-only planning misses.
+3. Academic freeze windows - a hard 2-week freeze is embedded before every UCP midterm/final block.
+4. One flagship hybrid project per phase - no isolated, redundant builds remain.
+5. Semester-reality correction - Phase 1 is rebuilt around actual Semester 5 courses (ML, AI, OS, InfoSec, SE) starting Sep 28, 2026, instead of generic content that would have re-created a known scheduling conflict.
+# | Phase & Timeline | Courses & Resources | Flagship Project | Compute Tier | Proof-of-Mastery Bar
+0 | Recall Sprint
+Sep 12-27, 2026 | CS50x
+MIT 6.006
+SQLBolt | Secure Systems Utility Suite (TCP client/server, file-integrity checker, log analyzer, CLI DB app, HTTP server) | Local CPU / WSL2 - $0 | Reproduce and GDB-patch >=1 real memory/logic bug in your own C code
+1 | Semester 5 Fusion
+Sep 28, 2026 - Jan 2027 | Stanford CS229
+Berkeley CS188
+MIT 6.1810 (xv6)
+PortSwigger Academy
+OWASP WSTG
+MIT 18.06
+MIT 18.05 | AI-Driven OS-Level Security Monitor - ML/AI anomaly detector instrumented into a modified xv6 kernel, WSTG-audited, SE-disciplined | Local CPU/WSL2 + GitHub Codespaces - $0-10/mo | Kernel extension traced live in a debugger; detector flags synthetic attacks with stated precision/recall; >=1 vuln remediated + report; full CI
+2 | Systems + Deep Learning
+Feb-Apr 2027 | Deep Learning Specialization
+fast.ai
+Stanford CS144
+Linux Journey
+Windows Internals / Sysinternals | Autodiff NN Framework (CPU) + Network-Level Intrusion Detector | Local CPU/WSL2 + free Colab burst - $0-20/mo | Autodiff trains a real model without PyTorch; TCP stack interoperates live in Wireshark; detector documents features
+3 | CV/NLP + Web Security Depth
+May-Jul 2027 | Stanford CS231n
+Stanford CS224N
+PortSwigger Academy (advanced)
+OWASP WSTG | Self-Audited CV/NLP Web Application - full OWASP methodology pentest of your own deployed app | Colab / Codespaces GPU-lite - $20-40/mo | Full vulnerability class found, exploited, and patched with a formal pentest report
+4 | LLM + Binary Exploitation
+Aug-Oct 2027 | Stanford CS336
+pwn.college | Transformer LLM + Binary Exploit Harness - from-scratch tokenizer/GPT paired with a self-introduced exploit | CLOUD GPU (RTX 4090/A100 via RunPod/Lambda) - $100-250/mo | Model generates coherent text; you independently execute a memory-corruption exploit you introduced yourself
+5 | MLOps + Reverse Engineering
+Nov 2027 - Jan 2028 | Stanford CS229S
+OST2
+Ghidra | MLOps Serving Platform + Binary Audit | HARDWARE TRAP  
+RAM-BOUND, not GPU-bound: 8GB local WILL bottleneck Ghidra+Docker+debugger - budget a cloud VM (16GB+) - $20-50/mo | Serving platform tracks drift + CI/CD live; binary fully decompiled & control-flow annotated with zero source access
+6 | Agents + Enterprise Security
+Feb-Apr 2028 | Hugging Face Agents Course
+AD Fundamentals (MS Learn) | Enterprise AI Agent Security Lab - tool-using agent tested against privilege escalation and prompt attacks | Cloud VM cluster (DC + workstation + attacker box) - $30-60/mo | >=3 distinct attack vectors executed against your own agent; boundaries patched and independently re-verified
+7 | FYP Integration
+May-Jun 2028 | University FYP Supervision | Thesis-Grade Research Artifact - hybrid AI system + security evaluation framework | Local + FYP-scope dependent | Publishable-quality report: threat model, baseline, ablations, open-source code
+8 | RL + Autonomous Security Agent
+Jul-Dec 2028 | Stanford CS224R | RL-driven agent that plans and executes multi-step security tests in a sandbox | Cloud GPU (RTX 4090/A100) - $100-200/mo | Agent completes test sequences with no hardcoded logic, evaluated against a benchmark you define
+9 | Formal Security + AI Red-Team
+Jan-Jun 2029 | MIT 6.1600
+MITRE ATT&CK Training | AI Red-Team Lab + Secure RAG - adversarial ML harness, prompt-injection suite, isolated RAG | Local + Cloud GPU burst - $50-100/mo | Working exploit/defense pairs with measured improvement over an undefended baseline
+10 | Research Reproductions
+Jul-Dec 2029 | Scientific Writing Practice (USENIX Security / NeurIPS workshop targets) | 6 full paper reproductions with ablations | Local + Cloud GPU as each paper demands | Each writeup documents exact divergence from the original, failure modes, and your own ablations
+11 | Original Invention
+Jan-Sep 2030 | No further courses - original research only | Unified open-source AI-security system solving a real, unaddressed gap | Cloud GPU, scaled to final scope - $100-300/mo | Open-source release, working benchmarks, formal writeup, external users or citations
+Terminal Exit Sequence
+1. Derive: Reconstruct the underlying math/logic from first principles, unaided.
+2. Implement: Build it from scratch - no wrapping an existing library and calling it done.
+3. Benchmark: Compare against a real, independent standard (NumPy, scikit-learn, a published CVE, an undefended baseline) with a stated numeric bar.
+4. Break: Attack or stress your own implementation until it fails.
+5. Patch: Fix the break, then re-attack to confirm the fix actually holds.
+6. Document: A written artifact another engineer could audit without asking you questions.
