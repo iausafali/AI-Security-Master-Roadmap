@@ -7,7 +7,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Architecture](https://img.shields.io/badge/Arch-x86__64%2FCUDA-76B900?logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-zone)
 [![Roadmap Status](https://img.shields.io/badge/Status-Phase%200%20IN_PROGRESS-FF6B35?logo=github&logoColor=white)](#-master-execution-table)
-[![Protocol](https://img.shields.io/badge/Protocol?logo=vercel&logoColor=white)](#-the-s-protocol-spec)
 
 ---
 
